@@ -1,6 +1,7 @@
 /*
 !/lib
 !/sample
+!/media
 !.gitignore
 !android.gradle
 !build.gradle
