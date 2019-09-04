@@ -1,0 +1,25 @@
+buildscript {
+    apply from: 'kotlin.gradle'
+    apply from: 'android.gradle'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$androidToolsBuildGradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+    ext {
+        applicationId = 'stan.android.widget.clndrsldr'
+        versionCode = 1
+        versionName = "0.00.01"
+    }
+}

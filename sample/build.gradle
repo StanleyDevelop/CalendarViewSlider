@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    def global = rootProject.ext
+
+    compileSdkVersion global.androidCompileSdkVersion
+    buildToolsVersion global.androidBuildToolsVersion
+    defaultConfig {
+        minSdkVersion global.androidMinSdkVersion
+        targetSdkVersion global.androidTargetSdkVersion
+        applicationId global.applicationId + ".sample"
+        versionCode global.versionCode
+        versionName global.versionName
+        archivesBaseName = "$applicationId-$versionCode"
+    }
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':lib')
+
+    def kotlin_version = rootProject.ext.kotlinVersion
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

@@ -1,0 +1,7 @@
+ext {
+    androidToolsBuildGradleVersion = '3.5.0'
+    androidCompileSdkVersion = 28
+    androidBuildToolsVersion = "28.0.3"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 28
+}
